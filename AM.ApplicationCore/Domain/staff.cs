@@ -6,25 +6,24 @@ using System.Threading.Tasks;
 
 namespace AM.ApplicationCore.Domain
 {
-    public class staff:Passenger
+    public class Staff:Passenger
     {
-        public DateOnly EmployementDate { get; set; }
-
+        public DateTime EmployementDate { get; set; }
         public string Function { get; set; }
-
         public double Salary { get; set; }
-
-
         public override string ToString()
         {
-            return "EmployementDate"+this.EmployementDate+"Salary" + this.Salary;
+            return "EmployementDate = "+this.EmployementDate + 
+                " Salary: "+this.Salary+
+                " Function: " +this.Function;
         }
 
-        public virtual void PassengerType()
+        public override void PassengerType()
         {
             base.PassengerType();
-            Console.WriteLine("I am a staff member");
+            Console.WriteLine("I'm a Staff member");
         }
     }
 
+   
 }

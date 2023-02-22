@@ -8,19 +8,18 @@ namespace AM.ApplicationCore.Domain
 {
     public class Traveller:Passenger
     {
-        public string HelathInformation { get; set; }
+        public string HealthInformation { get; set; }
         public string Nationality { get; set; }
-
-
         public override string ToString()
         {
-            return "Nationality" + this.Nationality+"HelathInformation"+this.HelathInformation;
+            return "Nationality: "+this.Nationality+ 
+                " HealthInformation: " +this.HealthInformation;
         }
 
-        public virtual void PassengerType()
+        public override void PassengerType()
         {
             base.PassengerType();
-            Console.WriteLine("I am a traveller member");
+            Console.WriteLine("I'm a Traveller");
         }
     }
 }
